@@ -1,7 +1,6 @@
-package katia.nienow.projetoconceitosintent;
+package katia.nienow.conceitosintent;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class RespostaActivity extends AppCompatActivity {
     private static final int REQUEST_CODE = 5;

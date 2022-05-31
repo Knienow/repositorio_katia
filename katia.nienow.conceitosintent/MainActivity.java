@@ -1,10 +1,9 @@
-package katia.nienow.projetoconceitosintent;
+package katia.nienow.conceitosintent;
 
 import androidx.annotation.Nullable;
-//import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvTextoVisivel.setVisibility(View.INVISIBLE);
 
-        /*Bundle extras = getIntent().getExtras();
+        Bundle extras = getIntent().getExtras();
         String pergunta = "";
         if(extras!=null) {
             pergunta = extras.getString("Pergunta");
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         if (actionBar != null) {
            actionBar.setTitle("Activity de respostas");
 
-        }*/
+        }
 
         imgbClear.setOnClickListener(new View.OnClickListener() {
             @Override
