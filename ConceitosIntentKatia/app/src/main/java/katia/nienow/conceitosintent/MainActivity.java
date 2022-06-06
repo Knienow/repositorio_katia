@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         tvTextoVisivel       = findViewById(R.id.tvTextoVisivel);
         btnPerguntar         = findViewById(R.id.btnPerguntar);
         edtDigiteUmaPergunta = findViewById(R.id.edtDigiteUmaPergunta);
-        imgbClear             = findViewById(R.id.imgbClear);
-        tvExibirResposta = findViewById(R.id.tvExibirResposta);
+        imgbClear            = findViewById(R.id.imgbClear);
+        tvExibirResposta     = findViewById(R.id.tvExibirResposta);
 
         tvTextoVisivel.setVisibility(View.INVISIBLE);
 
