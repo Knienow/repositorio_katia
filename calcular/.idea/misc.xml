@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/calcular/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/calcular/app/src/main/res/drawable/ic_divisao.xml" value="0.2805" />
+        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/calcular/app/src/main/res/drawable/ic_multiplica.xml" value="0.12" />
+        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/calcular/app/src/main/res/layout/activity_main.xml" value="0.11458333333333333" />
       </map>
     </option>
   </component>
