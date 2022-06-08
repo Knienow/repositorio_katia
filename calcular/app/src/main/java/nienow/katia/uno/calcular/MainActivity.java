@@ -1,6 +1,10 @@
 package nienow.katia.uno.calcular;
 
-import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import android.app.Activity;import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -107,11 +111,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         this.spiOpcoes = findViewById(R.id.spiOpcoes);
         this.spiOpcoes.setClickable(false);
         this.spiOpcoes.setOnTouchListener(new View.OnTouchListener() {
-
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 Log.v(TAG, "spinner touch");
-
                 //replicating a click
                 if(event.getAction() == MotionEvent.ACTION_UP){
                     v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
