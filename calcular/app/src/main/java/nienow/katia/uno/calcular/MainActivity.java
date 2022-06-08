@@ -1,5 +1,7 @@
 package nienow.katia.uno.calcular;
 
+import static java.lang.Integer.parseInt;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private EditText edtInserirNumero1, edtInserirNumero2, edtResultado;
     private Spinner spiOpcoes;
     private Button btnCalcular;
+    private int empty;
     public static final String SOMA = "Soma";
     public static final String SUBTRACAO = "Subtração";
     public static final String MULTIPLICACAO = "Multiplicação";
@@ -64,21 +67,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spiOpcoes.setAdapter(adapterOperacoesMatematicas);
         spiOpcoes.setOnItemSelectedListener(this);
 
-        String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
-
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
 
-                if (opcaoSelecionada == SOMA) {
+                if (opcaoSelecionada.equals(SOMA)) {
+                    tvResultado.setText(somar());
+
                     //System.out.println(edtInserirNumero1 + edtInserirNumero2.getText().toString());
-                } else if (opcaoSelecionada == SUBTRACAO) {
+                } else if (opcaoSelecionada.equals(SUBTRACAO)) {
+                    tvResultado.setText(subtrair());
 
-                } else if (opcaoSelecionada == MULTIPLICACAO) {
+                } else if (opcaoSelecionada.equals(MULTIPLICACAO)) {
+                    tvResultado.setText(multiplicar());
 
-                } else if (opcaoSelecionada == DIVISAO) {
+                } else if (opcaoSelecionada.equals(DIVISAO)) {
+                    tvResultado.setText(dividir());
 
                 } else {
 
@@ -96,12 +102,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         if (adapterView.getItemAtPosition(i).toString().equals(DIVISAO)) {
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_divisao, getTheme()));
+            edtInserirNumero1.setHint("dividendo");
+            edtInserirNumero2.setHint("divisor");
+            tvResultado.setHint("quociente");
+
         } else if (adapterView.getItemAtPosition(i).toString().equals(MULTIPLICACAO)) {
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_multiplica, getTheme()));
+            edtInserirNumero1.setHint("fator");
+            edtInserirNumero2.setHint("fator");
+            tvResultado.setHint("produto");
+
         } else if (adapterView.getItemAtPosition(i).toString().equals(SOMA)) {
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_soma, getTheme()));
+            edtInserirNumero1.setHint("parcela");
+            edtInserirNumero2.setHint("parcela");
+            tvResultado.setHint("total");
+
         } else if (adapterView.getItemAtPosition(i).toString().equals(SUBTRACAO)) {
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_subtracao, getTheme()));
+            edtInserirNumero1.setHint("minuendo");
+            edtInserirNumero2.setHint("subtraendo");
+            tvResultado.setHint("diferença");
+
         } else {
             Log.d(TAG, "Nenhuma opção foi selecionada");
         }
@@ -128,5 +150,99 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
+    private boolean validarOperacoes() {
+        int n1 = Integer.valueOf(edtInserirNumero1.getText().toString());
+        int n2 = Integer.valueOf(edtInserirNumero2.getText().toString());
 
+        if (n1 != empty) {
+            return true;
+        } else {
+            return false;
+        }
+
+        //if (n2 == empty){
+        //}
+    }
+
+    private String somar() {
+        int n1 = parseInt(edtInserirNumero1.getText().toString());
+        int n2 = parseInt(edtInserirNumero2.getText().toString());
+        int resultado = n1 + n2;
+        return "O resultado da soma é: " + resultado;
+    }
+
+    private String subtrair() {
+        int n1 = parseInt(edtInserirNumero1.getText().toString());
+        int n2 = parseInt(edtInserirNumero2.getText().toString());
+        int resultado = n1 - n2;
+        return "O resultado da subtração é: " + resultado;
+    }
+
+    private String multiplicar() {
+        int n1 = parseInt(edtInserirNumero1.getText().toString());
+        int n2 = parseInt(edtInserirNumero2.getText().toString());
+        int resultado = n1 * n2;
+        return "O resultado da multiplicação é: " + resultado;
+    }
+
+    private String dividir() {
+        int n1 = parseInt(edtInserirNumero1.getText().toString());
+        int n2 = parseInt(edtInserirNumero2.getText().toString());
+        int resultado = n1 / n2;
+        return "O resultado da divisão é: " + resultado;
+    }
+
+    private boolean validarTermoVazio(EditText editText) {
+        return editText.getText().toString().isEmpty();
+    }
 }
+
+    /*private boolean validarOperacoes(String tipoOperacao) {
+        boolean n1 = validarTermoVazio(edtInserirNumero1);
+        boolean n2 = validarTermoVazio(edtInserirNumero2);
+
+        if (tipoOperacao.equals(DIVISAO)) {
+            if (n1) {
+                Toast.makeText(this, "Informe o dividendo", Toast.LENGTH_SHORT).show();
+                edtInserirNumero1.requestFocus();
+                return false;
+            } else if (n2) {
+                Toast.makeText(this, "Informe o divisor", Toast.LENGTH_SHORT).show();
+                edtInserirNumero2.requestFocus();
+                return false;
+            }
+        } else if (tipoOperacao.equals(MULTIPLICACAO)) {
+            if (n1) {
+                Toast.makeText(this, "Informe o fator", Toast.LENGTH_SHORT).show();
+                edtInserirNumero1.requestFocus();
+                return false;
+            } else if (n2) {
+                Toast.makeText(this, "Informe o fator", Toast.LENGTH_SHORT).show();
+                edtInserirNumero2.requestFocus();
+                return false;
+            }
+
+        } else if (tipoOperacao.equals(SOMA)) {
+            if (n1) {
+                Toast.makeText(this, "Informe a parcela", Toast.LENGTH_SHORT).show();
+                edtInserirNumero1.requestFocus();
+                return false;
+            } else if (n2) {
+                Toast.makeText(this, "Informe a parcela", Toast.LENGTH_SHORT).show();
+                edtInserirNumero2.requestFocus();
+                return false;
+            }
+
+        } else if (tipoOperacao.equals(SUBTRACAO)) {
+            if (n1) {
+                Toast.makeText(this, "Informe o dividendo", Toast.LENGTH_SHORT).show();
+                edtInserirNumero1.requestFocus();
+                return false;
+            } else if (n2) {
+                Toast.makeText(this, "Informe o divisor", Toast.LENGTH_SHORT).show();
+                edtInserirNumero2.requestFocus();
+                return false;
+            }
+        }
+        return true;
+    }*/
