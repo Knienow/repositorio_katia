@@ -19,23 +19,26 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    public static final String SOMA = "Soma";
+    public static final String SUBTRACAO = "Subtração";
+    public static final String MULTIPLICACAO = "Multiplicação";
+    public static final String DIVISAO = "Divisão";
+    public int ZERO = 0;
     private TextView tvOpcao, tvResultado;
     private ImageView imgvOperacao, imgvIgual;
     private EditText edtInserirNumero1, edtInserirNumero2, edtResultado;
     private Spinner spiOpcoes;
     private Button btnCalcular;
+    private ImageButton imgbVoltar;
     private int empty;
-    public static final String SOMA = "Soma";
-    public static final String SUBTRACAO = "Subtração";
-    public static final String MULTIPLICACAO = "Multiplicação";
-    public static final String DIVISAO = "Divisão";
-    private static final String TAG = "MainActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,24 +51,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             actionBar.setTitle("Calcular");
         }
 
-        tvOpcao = findViewById(R.id.tvOpcao);
-        tvResultado = findViewById(R.id.tvResultado);
-        imgvOperacao = findViewById(R.id.imgvOperacao);
-        imgvIgual = findViewById(R.id.imgvIgual);
-        edtInserirNumero1 = findViewById(R.id.edtInserirNumero1);
-        edtInserirNumero2 = findViewById(R.id.edtInserirNumero2);
-        spiOpcoes = findViewById(R.id.spiOpcoes);
-        btnCalcular = findViewById(R.id.btnCalcular);
+        tvOpcao             = findViewById(R.id.tvOpcao);
+        tvResultado         = findViewById(R.id.tvResultado);
+        imgvOperacao        = findViewById(R.id.imgvOperacao);
+        imgvIgual           = findViewById(R.id.imgvIgual);
+        edtInserirNumero1   = findViewById(R.id.edtInserirNumero1);
+        edtInserirNumero2   = findViewById(R.id.edtInserirNumero2);
+        spiOpcoes           = findViewById(R.id.spiOpcoes);
+        btnCalcular         = findViewById(R.id.btnCalcular);
 
         imgvOperacao.setVisibility(View.INVISIBLE);
 
-        ArrayAdapter<String> adapterOperacoesMatematicas = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.operacoes_matematicas));
+        ArrayAdapter<String> adapterOperacoesMatematicas = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.operacoes_matematicas));
         adapterOperacoesMatematicas.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //adapter - fazer com que o conteúdo seja exibido na spinner
         //AlertDialog.Builder spinner;
 
         spiOpcoes.setAdapter(adapterOperacoesMatematicas);
-        spiOpcoes.setOnItemSelectedListener(this);
+        spiOpcoes.setOnItemSelectedListener(this); //argumento do método
 
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,22 +77,40 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
 
                 if (opcaoSelecionada.equals(SOMA)) {
-                    tvResultado.setText(somar());
-
-                    //System.out.println(edtInserirNumero1 + edtInserirNumero2.getText().toString());
+                    if (validarTermosVazios()) {
+                        if (validar){
+                            tvResultado.setText(somar());
+                        } else {
+                            Toast.makeText(MainActivity.this, "O divisor não pode ser ZERO!!", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+                    }
                 } else if (opcaoSelecionada.equals(SUBTRACAO)) {
-                    tvResultado.setText(subtrair());
-
+                    if(validarTermosVazios()){
+                        if(validar){
+                            tvResultado.setText(subtrair());
+                        } else{
+                            Toast.makeText(MainActivity.this, "O divisor não pode ser ZERO!!", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+                    }
                 } else if (opcaoSelecionada.equals(MULTIPLICACAO)) {
-                    tvResultado.setText(multiplicar());
+                    if(tvResultado.setText(multiplicar());
 
                 } else if (opcaoSelecionada.equals(DIVISAO)) {
-                    tvResultado.setText(dividir());
-
-                } else {
-
-                    Toast.makeText(MainActivity.this, "Selecione uma operação matemática válida!", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(MainActivity.this, "Insira um número!", Toast.LENGTH_SHORT).show();
+                    if (validarTermosVazios()) {
+                        if (validarDivisor()) {
+                            tvResultado.setText(dividir());
+                        } else {
+                            Toast.makeText(MainActivity.this, "O divisor não pode ser ZERO!!", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+                    }
+                    /*Toast.makeText(MainActivity.this, "Selecione uma operação matemática válida!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Insira um número!", Toast.LENGTH_SHORT).show();*/
                 }
             }
         });
@@ -165,9 +186,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     private String somar() {
-        int n1 = parseInt(edtInserirNumero1.getText().toString());
-        int n2 = parseInt(edtInserirNumero2.getText().toString());
-        int resultado = n1 + n2;
+        int n1 = Integer.valueOf(edtInserirNumero1.getText().toString());
+        int n2 = Integer.valueOf(edtInserirNumero2.getText().toString());
+        String resultado = String.valueOf(n1 + n2);
         return "O resultado da soma é: " + resultado;
     }
 
@@ -192,15 +213,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return "O resultado da divisão é: " + resultado;
     }
 
-    private boolean validarTermoVazio(EditText editText) {
-        return editText.getText().toString().isEmpty();
+    private boolean validarTermosVazios() {
+        if(!edtInserirNumero1.getText().toString().isEmpty()){
+            if(!edtInserirNumero1.getText().toString().isEmpty()){
+                return true;
+            }else{
+                edtInserirNumero1.requestFocus();
+                return false;
+            }
+
+        }else {
+            edtInserirNumero2.requestFocus();
+            return false;
+        }
     }
 }
 
     /*private boolean validarOperacoes(String tipoOperacao) {
         boolean n1 = validarTermoVazio(edtInserirNumero1);
         boolean n2 = validarTermoVazio(edtInserirNumero2);
-
         if (tipoOperacao.equals(DIVISAO)) {
             if (n1) {
                 Toast.makeText(this, "Informe o dividendo", Toast.LENGTH_SHORT).show();
@@ -221,7 +252,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 edtInserirNumero2.requestFocus();
                 return false;
             }
-
         } else if (tipoOperacao.equals(SOMA)) {
             if (n1) {
                 Toast.makeText(this, "Informe a parcela", Toast.LENGTH_SHORT).show();
@@ -232,7 +262,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 edtInserirNumero2.requestFocus();
                 return false;
             }
-
         } else if (tipoOperacao.equals(SUBTRACAO)) {
             if (n1) {
                 Toast.makeText(this, "Informe o dividendo", Toast.LENGTH_SHORT).show();
