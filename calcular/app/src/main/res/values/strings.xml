@@ -6,5 +6,9 @@
         <item>Subtração</item>
         <item>Multiplicação</item>
         <item>Divisão</item>
+        <item>Potência de 10</item>
+        <item>Potenciação</item>
+        <item>Raiz Quadrada</item>
+        <item>Logaritmo</item>
     </string-array>
 </resources>

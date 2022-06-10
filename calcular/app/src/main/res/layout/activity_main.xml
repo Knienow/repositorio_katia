@@ -62,7 +62,7 @@
         android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="valor"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/tvTipoOperacao"
         app:layout_constraintHorizontal_bias="0.58"
@@ -78,7 +78,7 @@
         android:layout_marginBottom="51dp"
         android:ems="10"
         android:hint="valor"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,16 +118,5 @@
         app:layout_constraintStart_toStartOf="@+id/btnCalcular"
         app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
 
-    <ImageButton
-        android:id="@+id/imgbVoltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvResultado"
-        app:srcCompat="@drawable/ic_returnbutton"
-        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
