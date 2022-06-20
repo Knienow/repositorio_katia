@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/ConceitoClassesAbstrataseInterfaces/app/src/main/res/drawable/ic_limpar.xml" value="0.2865" />
         <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/ConceitoClassesAbstrataseInterfaces/app/src/main/res/layout/activity_main.xml" value="0.13518518518518519" />
+        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/ConceitoClassesAbstrataseInterfaces/app/src/main/res/layout/fragment_blank.xml" value="0.13518518518518519" />
+        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/ConceitoClassesAbstrataseInterfaces/app/src/main/res/layout/fragment_circunferencia.xml" value="0.13518518518518519" />
+        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/ConceitoClassesAbstrataseInterfaces/app/src/main/res/layout/fragment_mensagem.xml" value="0.13518518518518519" />
+        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/ConceitoClassesAbstrataseInterfaces/app/src/main/res/layout/fragment_retangulo.xml" value="0.13518518518518519" />
+        <entry key="..\:/Users/Alunos/Documents/Katia/repositorio_katia/ConceitoClassesAbstrataseInterfaces/app/src/main/res/layout/fragment_triangulo.xml" value="0.13518518518518519" />
       </map>
     </option>
   </component>

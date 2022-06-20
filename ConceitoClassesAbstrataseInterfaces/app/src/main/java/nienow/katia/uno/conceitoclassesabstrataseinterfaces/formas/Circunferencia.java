@@ -1,5 +1,7 @@
 package nienow.katia.uno.conceitoclassesabstrataseinterfaces.formas;
 
+/*Java - Guia do Programador - 3ª Edição - https://github.com/pjandl/jgp3*/
+
 import static java.lang.Math.*;
 
 public class Circunferencia extends Forma {

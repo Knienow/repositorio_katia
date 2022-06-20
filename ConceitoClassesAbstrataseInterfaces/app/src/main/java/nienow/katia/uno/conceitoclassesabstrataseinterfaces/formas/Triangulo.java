@@ -1,6 +1,6 @@
 package nienow.katia.uno.conceitoclassesabstrataseinterfaces.formas;
 
-import nienow.katia.uno.conceitoclassesabstrataseinterfaces.formas.Forma;
+/*Java - Guia do Programador - 3ª Edição - https://github.com/pjandl/jgp3*/
 
 public class Triangulo extends Forma {
     public Triangulo(double l1, double l2, double l3) {
@@ -11,6 +11,7 @@ public class Triangulo extends Forma {
     }
 
     // impl. método abstrato area() usando fórmula de Herão
+    //não pode alterar a assinatura do método herdado da classe pai
     @Override
     public double area() {
         double sp = (getMedida(0) + getMedida(1) + getMedida(2)) / 2;

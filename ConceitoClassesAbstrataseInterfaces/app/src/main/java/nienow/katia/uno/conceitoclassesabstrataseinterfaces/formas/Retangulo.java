@@ -1,6 +1,6 @@
 package nienow.katia.uno.conceitoclassesabstrataseinterfaces.formas;
 
-import nienow.katia.uno.conceitoclassesabstrataseinterfaces.formas.Forma;
+/*Java - Guia do Programador - 3ª Edição - https://github.com/pjandl/jgp3*/
 
 public class Retangulo extends Forma {
     public Retangulo(double altura, double largura) {
