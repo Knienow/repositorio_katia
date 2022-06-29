@@ -27,7 +27,5 @@ public abstract class Forma {
     //método abstrato deve ser público - não possui {}
     public abstract double area();
 
-
-
     //tentar instanciar um obj de uma classe abstrata gera erro de compilação
 }

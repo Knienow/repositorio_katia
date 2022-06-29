@@ -1,14 +1,20 @@
 package nienow.katia.uno.tddtesteunitario.forma;
 
 public class Circunferencia extends Forma{
-    public static final int TAMANHO_ARRAY_INFO_CALCULO_AEREA = 1;
+    private static final int TAMANHO_ARRAY_INFO_CALCULO_AEREA = 1;
+    private static final int POSICAO_ZERO                     = 0;
+    private static final double EXPOENTE_2                    = 2;
 
-    public Circunferencia(int numMedidas) {
-        super(numMedidas);
+
+    public Circunferencia() {
+        super(TAMANHO_ARRAY_INFO_CALCULO_AEREA);
+    }
+    public int getTamanhoArrayInfoCalculoAerea(){
+        return TAMANHO_ARRAY_INFO_CALCULO_AEREA;
     }
 
     @Override
     public double area() {
-        return TAMANHO_ARRAY_INFO_CALCULO_AEREA;
+        return Math.PI * Math.pow(getMedida(POSICAO_ZERO), EXPOENTE_2);
     }
 }
