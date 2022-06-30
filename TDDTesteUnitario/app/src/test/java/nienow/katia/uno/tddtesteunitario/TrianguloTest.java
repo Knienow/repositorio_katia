@@ -1,22 +1,28 @@
 package nienow.katia.uno.tddtesteunitario;
 
-import nienow.katia.uno.tddtesteunitario.forma.Forma;
+import org.junit.Test;
 
-public class TrianguloTest extends Forma {
+import nienow.katia.uno.tddtesteunitario.forma.Triangulo;
 
-    public TrianguloTest(int numMedidas) {
-        super(numMedidas);
+public class TrianguloTest {
+    private static final double LADO_1 = 3;
+    private static final double LADO_2 = 3;
+    private static final double LADO_3 = 3;
+    private static final Triangulo triangulo = new Triangulo();
+
+    TrianguloTest(){}
+
+    @Test
+    public void deveriaTerUmValorDeSomaDosLadosDoTriangulo(){}
+        double sl = LADO_1 + LADO_2 + LADO_3;
+
+    @Test
+    public void deveriaTerOsValoresDaSomaDosTriangulosDivididoPorDois(){
+        double resultadoDivisao = sl / 2;
     }
 
-    //soma dos lados - sl
-    @Override
-    public double area() {
-        double lado1 = 3;
-        double lado2 = 3;
-        double lado3 = 3;
-
-        //soma do lados do triangulo dividido por 2;
-        //raiz quadrada de sl
-        return sl * (sl - lado2) * (sl - lado3);
+    @Test
+    public void deveriaCalcularAreaDoPerimetroDoTriangulo(){
+        double perimetro = sl *(sl - LADO_1) * (sl - LADO_2) * (sl - LADO_3);
     }
 }
