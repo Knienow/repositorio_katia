@@ -1,0 +1,10 @@
+INSERT INTO prioridade(id, nome) VALUES(1,'prioridade1');
+INSERT INTO prioridade(id, nome) VALUES(2,'prioridade2');
+INSERT INTO prioridade(id, nome) VALUES(3,'prioridade3');
+INSERT INTO prioridade(id, nome) VALUES(4,'prioridade4');
+INSERT INTO prioridade(id, nome) VALUES(5,'prioridade5');
+INSERT INTO prioridade(id, nome) VALUES(6,'prioridade6');
+INSERT INTO prioridade(id, nome) VALUES(7,'prioridade7');
+INSERT INTO prioridade(id, nome) VALUES(8,'prioridade8');
+INSERT INTO prioridade(id, nome) VALUES(9,'prioridade9');
+INSERT INTO prioridade(id, nome) VALUES(10,'prioridade10');

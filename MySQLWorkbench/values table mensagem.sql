@@ -1,0 +1,10 @@
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem1', 'remetente1', 'destinatario1', '20220714', '0922');
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem2', 'remetente2', 'destinatario2', '20220713', '0921');
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem3', 'remetente3', 'destinatario3', '20220712', '0920');
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem4', 'remetente4', 'destinatario4', '20220711', '0919');
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem5', 'remetente5', 'destinatario5', '20220710', '0918');
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem6', 'remetente6', 'destinatario6', '20220709', '0917');
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem7', 'remetente7', 'destinatario7', '20220708', '0916');
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem8', 'remetente8', 'destinatario8', '20220707', '0915');
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem9', 'remetente9', 'destinatario9', '20220706', '0914');
+INSERT INTO mensagem(mensagem, remetente, destinatario, data, hora) VALUES('mensagem10', 'remetente10', 'destinatario10', '20220705', '0913');

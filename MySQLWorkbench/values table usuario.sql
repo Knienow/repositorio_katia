@@ -1,0 +1,10 @@
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario1', 'usuario1@gmail.com', '4989562154', 'setor1', 'filial1', 'login1', 'senha1');
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario2', 'usuario2@gmail.com', '4988562154', 'setor2', 'filial2', 'login2', 'senha2');
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario3', 'usuario3@gmail.com', '4987562154', 'setor3', 'filial3', 'login3', 'senha3');
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario4', 'usuario4@gmail.com', '4986562154', 'setor4', 'filial4', 'login4', 'senha4');
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario5', 'usuario5@gmail.com', '4985562154', 'setor5', 'filial5', 'login5', 'senha5');
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario6', 'usuario6@gmail.com', '4984562154', 'setor6', 'filial6', 'login6', 'senha6');
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario7', 'usuario7@gmail.com', '4983562154', 'setor7', 'filial7', 'login7', 'senha7');
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario8', 'usuario8@gmail.com', '4982562154', 'setor8', 'filial8', 'login8', 'senha8');
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario9', 'usuario9@gmail.com', '4981562154', 'setor9', 'filial9', 'login9', 'senha9');
+INSERT INTO usuario(nome, email, celular, setor, filial, login, senha) VALUES('usuario10', 'usuario10@gmail.com', '4980562154', 'setor10', 'filial10', 'login10', 'senha10');

@@ -1,0 +1,10 @@
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('Java', '2', 20220321, 20220802, '8500');
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('CSS', '3', 20220922, 20221202, '8200');
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('HTML', '1', 20220318, 20220402, '7800');
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('C++', '4', 20220403, 20220502, '6500');
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('PHYTON', '6', 20220825, 20220902, '4500');
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('RUBY', '5', 20221012, 20221102, '3200');
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('PHP', '9', 20220906, 20221002, '8900');
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('Kotlin', '8', 20220804, 20220902, '8700');
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('Frameworks', '7', 20220426, 20220506, '6400');
+INSERT INTO curso (nome, nivel, data_inicio, data_fim, valor) VALUES ('Algebra', '5', 20220609, 20220708, '3400');

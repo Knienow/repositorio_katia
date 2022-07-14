@@ -1,0 +1,10 @@
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Alicia', 'Schroetter', 'português', '19800514', '19420625', '55998524612');
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Lourdes', 'Ancho', 'matemática', '19800514', '19420625', '55998524612');
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Margarete', 'Schutter', 'química', '19800514', '19420625', '55998524612');
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Vanda', 'Moraes', 'física', '19800514', '19420625', '55998524612');
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Vaninha', 'Souza', 'biologia', '19800514', '19420625', '55998524612');
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Fernanda', 'Moura', 'inglês', '19800514', '19420625', '55998524612');
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Kelly', 'Alves', 'francês', '19800514', '19420625', '55998524612');
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Tauana', 'Hermes', 'educação física', '19800514', '19420625', '55998524612');
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Teresa', 'Ohler', 'literatura', '19800514', '19420625', '55998524612');
+INSERT INTO professor(nome, sobrenome, disciplina, data_admissao, data_nascimento, celular) VALUES('Jandira', 'Vieira', 'filosofia', '19800514', '19420625', '55998524612');

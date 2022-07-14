@@ -1,0 +1,10 @@
+INSERT INTO setor(id, nome, sigla) VALUES(1, 'setor1','SIG1');
+INSERT INTO setor(id, nome, sigla) VALUES(2, 'setor2','SIG2');
+INSERT INTO setor(id, nome, sigla) VALUES(3, 'setor3','SIG3');
+INSERT INTO setor(id, nome, sigla) VALUES(4, 'setor4','SIG4');
+INSERT INTO setor(id, nome, sigla) VALUES(5, 'setor5','SIG5');
+INSERT INTO setor(id, nome, sigla) VALUES(6, 'setor6','SIG6');
+INSERT INTO setor(id, nome, sigla) VALUES(7, 'setor7','SIG7');
+INSERT INTO setor(id, nome, sigla) VALUES(8, 'setor8','SIG8');
+INSERT INTO setor(id, nome, sigla) VALUES(9, 'setor9','SIG9');
+INSERT INTO setor(id, nome, sigla) VALUES(10, 'setor10','SIG10');
