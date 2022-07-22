@@ -13,7 +13,7 @@ public abstract class DatabaseApp extends RoomDatabase {
     //CREATE DATABASE db_app;
     private static final String DB_NAME = "db_app.db";
     private static volatile DatabaseApp sInstance;
-    private static final String TAG = "O banco foi criado com sucesso! Executar rotinas posteriores.";
+    private static final String TAG = "DatabaseApp";
 
     public DatabaseApp() {
     }
