@@ -5,10 +5,14 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.util.concurrent.Executors;
 
+import nienow.katia.uno.morintegraocomjava.database_app.converter.Converters;
+
+@TypeConverters({Converters.class})
 public abstract class DatabaseApp extends RoomDatabase {
     //CREATE DATABASE db_app;
     private static final String DB_NAME = "db_app.db";
