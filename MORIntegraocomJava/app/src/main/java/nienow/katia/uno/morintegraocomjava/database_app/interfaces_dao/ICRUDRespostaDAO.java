@@ -1,34 +1,46 @@
 package nienow.katia.uno.morintegraocomjava.database_app.interfaces_dao;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Transaction;
+import androidx.room.Update;
 
 import java.util.List;
 import nienow.katia.uno.morintegraocomjava.database_app.tabelas.Resposta;
 
 @Dao
 public interface ICRUDRespostaDAO {
+
     @Transaction
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertResposta(Resposta tblResposta);
+    public void insertResposta(Resposta respostaTable);
 
-    @Query("SELECT * FROM tbl_resposta WHERE id = :id")
-    Resposta getEspecificaRespostaById(int id);
+    @Query("SELECT * FROM tbl_resposta where id = :id")
+    public Resposta getEspecificRespostaByID(int id);
 
-    List<Resposta> getAllRespostas();
+    @Query("SELECT * FROM tbl_resposta ORDER BY id DESC")
+    public List<Resposta> getAllRespostas();
 
-    void updateResposta(Resposta tblResposta);
+    @Transaction
+    @Update(entity = Resposta.class, onConflict = OnConflictStrategy.REPLACE)
+    public void updateRespostas(Resposta respostaTable);
 
-    void deleteResposta(Resposta tblResposta);
+    //O CASCADE
+    @Transaction
+    @Delete(entity = Resposta.class)
+    public void deleteResposta(Resposta respostaTable);
 
-    void deleteRespostaById(int id);
+    @Transaction
+    @Query("DELETE FROM tbl_resposta WHERE id = :id")
+    public void deleteRespostaByID(int id);
 
-    void deleteAllRespostas();
+    @Transaction
+    @Query("DELETE FROM tbl_resposta WHERE id > 0")
+    public void deleteAllResposta();
 }
-
 
 
 

@@ -7,37 +7,37 @@ import static androidx.room.ForeignKey.CASCADE;
 
 //Definição de chaves estrangeiras
 @Entity(tableName = "tbl_aluno_prova"
-        , primaryKeys = {"aluno_id", "prova_id"}
-        , indices = {@Index(value = {"aluno_id"}),@Index(value = {"prova_id"})}
+        , primaryKeys = {"idAluno", "idProva"}
+        , indices = {@Index(value = {"idAluno"}), @Index(value = {"idProva"})}
         , foreignKeys = {@ForeignKey(entity = Aluno.class, parentColumns = "id",
-        childColumns = "Aluno", onUpdate = CASCADE, onDelete = CASCADE)
-        ,@ForeignKey(entity = Prova.class, parentColumns = "id",
-        childColumns = "prova_id", onUpdate = CASCADE, onDelete = CASCADE)})
-
+        childColumns = "idAluno", onUpdate = CASCADE, onDelete = CASCADE)
+        , @ForeignKey(entity = Prova.class, parentColumns = "id",
+        childColumns = "idProva", onUpdate = CASCADE, onDelete = CASCADE)})
 public class AlunoProva {
-    private int aluno_id;
-    private int prova_id;
+    private int idAluno;
+    private int idProva;
 
     public AlunoProva() {}
 
+    //COnstrutor de cópia
     public AlunoProva(AlunoProva tblAlunoProva){
-        this.aluno_id = tblAlunoProva.getAluno_id();
-        this.prova_id = tblAlunoProva.getProva_id();
+        this.idAluno = tblAlunoProva.getIdAluno();
+        this.idProva = tblAlunoProva.getIdProva();
     }
 
-    public int getAluno_id(){
-        return aluno_id;
+    public int getIdAluno() {
+        return idAluno;
     }
 
-    public void setAluno_id(int aluno_id){
-        this.aluno_id = aluno_id;
+    public void setIdAluno(int idAluno) {
+        this.idAluno = idAluno;
     }
 
-    public int getProva_id(){
-        return prova_id;
+    public int getIdProva() {
+        return idProva;
     }
 
-    public void setProva_id(int prova_id){
-        this.prova_id = prova_id;
+    public void setIdProva(int idProva) {
+        this.idProva = idProva;
     }
 }

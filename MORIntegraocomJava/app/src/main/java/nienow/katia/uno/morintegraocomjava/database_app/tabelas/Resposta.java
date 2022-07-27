@@ -8,44 +8,36 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "tbl_resposta"
-        , indices = {@Index(value = {"pergunta_id"}) , @Index(value = {"id"})}
-        , foreignKeys = {@ForeignKey(entity = Pergunta.class , parentColumns = "id" ,
-        childColumns = "pergunta_id" , onUpdate = CASCADE , onDelete = CASCADE)})
-
+        , indices = {@Index(value = "id")}
+        , foreignKeys = {@ForeignKey(entity = Pergunta.class, parentColumns = "id",
+        childColumns = "id", onUpdate = CASCADE, onDelete = CASCADE)})
 public class Resposta {
-    @PrimaryKey(autoGenerate = true)
-    private int id, pergunta_id;
+    @PrimaryKey
+    private int id;
+
     private String resposta;
 
-    public Resposta(){}
+    public Resposta() {}
 
+    //Construtor de cópia
     public Resposta(Resposta tblResposta){
-        this.id             = tblResposta.getId();
-        this.pergunta_id    = tblResposta.getPergunta_id();
-        this.resposta       = tblResposta.getResposta();
+        this.id       = tblResposta.getId();
+        this.resposta = tblResposta.getResposta();
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 
-    public int getPergunta_id(){
-        return pergunta_id;
-    }
-
-    public void setPergunta_id(int pergunta_id){
-        this.pergunta_id = pergunta_id;
-    }
-
-    public String getResposta(){
+    public String getResposta() {
         return resposta;
     }
 
-    public void setResposta(String resposta){
+    public void setResposta(String resposta) {
         this.resposta = resposta;
     }
 }

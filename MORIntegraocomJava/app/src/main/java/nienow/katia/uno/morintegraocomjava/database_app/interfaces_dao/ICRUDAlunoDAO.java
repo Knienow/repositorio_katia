@@ -1,6 +1,7 @@
 package nienow.katia.uno.morintegraocomjava.database_app.interfaces_dao;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -16,23 +17,28 @@ public interface ICRUDAlunoDAO {
 
     @Transaction
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAluno(Aluno tblAluno);
+    public void insertAluno(Aluno alunoTable);
 
-    @Query("SELECT * FROM tbl_aluno WHERE id = :id")
-    Aluno getEspecificaAlunoById(int id);
+    @Query("SELECT * FROM tbl_aluno where id = :id")
+    public Aluno getEspecificAlunoByID(int id);
 
     @Query("SELECT * FROM tbl_aluno ORDER BY id DESC")
-
-    List<Aluno> getAllAlunos();
+    public List<Aluno> getAllAlunos();
 
     @Transaction
-    @Update(entity = Aluno.class)
+    @Update(entity = Aluno.class, onConflict = OnConflictStrategy.REPLACE)
+    public void updateAlunos(Aluno alunoTable);
 
-    void updateAluno(Aluno tblAluno);
+    //O CASCADE deverá funcionar aqui p/ a tabela: AlunoProva
+    @Transaction
+    @Delete(entity = Aluno.class)
+    public void deleteAluno(Aluno alunoTable);
 
-    void deleteAluno(Aluno tblAluno);
+    @Transaction
+    @Query("DELETE FROM tbl_aluno WHERE id = :id")
+    public void deleteAlunoByID(int id);
 
-    void deleteAlunoById(int id);
-
-    void deleteAllAlunos();
+    @Transaction
+    @Query("DELETE FROM tbl_aluno WHERE id > 0")
+    public void deleteAllAlunos();
 }

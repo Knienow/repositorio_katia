@@ -1,32 +1,44 @@
 package nienow.katia.uno.morintegraocomjava.database_app.interfaces_dao;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Transaction;
+import androidx.room.Update;
 
 import java.util.List;
 
-import nienow.katia.uno.morintegraocomjava.database_app.tabelas.Aluno;
 import nienow.katia.uno.morintegraocomjava.database_app.tabelas.AlunoProva;
 
 @Dao
 public interface ICRUDAlunoProvaDAO {
+
     @Transaction
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAlunoProva(AlunoProva tblAlunoProva);
+    public void insertAlunoProva(AlunoProva alunoProvaTable);
 
-        @Query("SELECT * FROM tbl_aluno_prova WHERE aluno_id = :id")
-        AlunoProva getEspecificaAlunoProvaById(int id);
+    @Query("SELECT * FROM tbl_aluno_prova where idAluno = :idAluno AND idProva = :idProva")
+    public AlunoProva getEspecificAlunoProvaByID(int idAluno, int idProva);
 
-        List<AlunoProva> getAllAlunosProva();
+    @Query("SELECT * FROM tbl_aluno_prova ORDER BY idAluno, idProva DESC")
+    public List<AlunoProva> getAllAlunosProvas();
 
-        void updateAlunoProva(Aluno tblAlunoProva);
+    @Transaction
+    @Update(entity = AlunoProva.class, onConflict = OnConflictStrategy.REPLACE)
+    public void updateAlunoProva(AlunoProva alunoProvaTable);
 
-        void deleteAlunoProva(Aluno tblAlunoProva);
+    //CASCADE definido nas tabelas base
+    @Transaction
+    @Delete(entity = AlunoProva.class)
+    public void deleteAlunoProva(AlunoProva alunoProvaTable);
 
-        void deleteAlunoProvaById(int id);
+    @Transaction
+    @Query("DELETE FROM tbl_aluno_prova WHERE idAluno = :idAluno")
+    public void deleteAlunoProvaByID(int idAluno);
 
-        void deleteAllAlunosProva();
+    @Transaction
+    @Query("DELETE FROM tbl_aluno_prova WHERE idAluno > 0")
+    public void deleteAllAlunosProvas();
 }

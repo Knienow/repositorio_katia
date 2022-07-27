@@ -6,14 +6,17 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "tbl_aluno"
         , indices = {@Index(value = "id", unique = true)})
-
 public class Aluno {
+
     @PrimaryKey(autoGenerate = true)
     private int id;
 
-    private String nome, celular, email, github_usuario;
+    private String nome;
+    private String celular;
+    private String email;
+    private String gitHubUsuario;
 
-    public Aluno(){}
+    public Aluno() {}
 
     //Construtor de cópia
     public Aluno(Aluno tblAluno){
@@ -21,7 +24,7 @@ public class Aluno {
         this.nome          = tblAluno.getNome();
         this.celular       = tblAluno.getCelular();
         this.email         = tblAluno.getEmail();
-        this.github_usuario = tblAluno.getGithub_usuario();
+        this.gitHubUsuario = tblAluno.getGitHubUsuario();
     }
 
     public int getId() {
@@ -56,11 +59,11 @@ public class Aluno {
         this.email = email;
     }
 
-    public String getGithub_usuario() {
-        return github_usuario;
+    public String getGitHubUsuario() {
+        return gitHubUsuario;
     }
 
-    public void setGithubUsuario(String githubUsuario) {
-        this.github_usuario = github_usuario;
+    public void setGitHubUsuario(String gitHubUsuario) {
+        this.gitHubUsuario = gitHubUsuario;
     }
 }
