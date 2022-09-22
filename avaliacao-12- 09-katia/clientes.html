@@ -1,0 +1,213 @@
+<!--DESENVOLVER DUAS TELAS FRONT-END RESPONSIVAS E ESTILIZADAS COM HEADER (LOGO DA SUA EMPRESA) FOOTER(COPYRIGHT), PLANO DE FUNDO, BORDAS E ICONES:
+
+TELA 1: CADASTRO DE CLIENTE
+MENU DE NAVEGAÇÃO ENTRE A TELA 1 E A TELA 2
+Razão Social ou nome completo - ok
+Nome Fantasia (se empresa) -ok
+CNPJ/CPF - ok
+Fundação/aniversário - ok
+Dados de endereço (Rua, numero, Cidade, Estado) - ok
+Dados de contato ( celular e e-mail, Telefone) - ok 
+Atividade econômica/profissão - ok
+Dependentes/Funcionários - ok
+Botão Cadastrar e Botão Cancelar - ok -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de clientes</title>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+</head>
+<body>
+  <body class="background-cadastro">
+    <table align="" style="width: 100%;">
+        <tr align="left">
+            <td align="center" class="botoes-topo-menu">
+                <a href="clientes.html" style="color: black; text-decoration:none">
+                    <img src="./imagens/users.png" width="50" height="50">
+                    <br>
+                    Usuário
+                </a>
+            </td>
+            <td align="center" class="botoes-topo-menu">
+                <a href="produtos.html" style="color: black; text-decoration:none">
+                    <img src="./imagens/box.png" width="50" height="50">
+                    <br>
+                    Produto
+                </a>
+            </td>
+        </tr>
+    </table>
+    <h1 align=center>Cadastro de clientes</h1>
+    <form action="" method="post" style="color: black" align="left">
+        <fieldset>
+            <!--<legend class="texto-negrito">Dados pessoais</legend>-->
+            <table cellpadding="2">
+                <tr class="texto-negrito">
+                    <td>
+                        <label class="titulo-campos-formulario" for="nome">Razão Social ou nome completo:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="nome">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="nomefantasia">Nome Fantasia (para empresas):</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="nomefantasia">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="datanasc">Fundação/Data de Nascimento:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="dia" size="2" maxlength="2" value="dd">
+                        <input type="text" name="mes" size="2" maxlength="2" value="mm">
+                        <input type="text" name="ano" size="4" maxlength="2" value="aaaa">
+                    </td>
+                </tr>
+                <tr class="texto-negrito">
+                    <td>
+                        <label class="titulo-campos-formulario" for="rg">Rg:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="rg" size="13" maxlength="13">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="cpf">CNPJ/CPF:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="cpf" size="14" maxlength="14">
+                    </td>
+                </tr>
+                <tr class="texto-negrito">
+                    <td>
+                        <label class="titulo-campos-formulario" for="profissao">Atividade econômica/profissão:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="profissao">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="dependentes">Dependentes/Funcionários:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="dependentes">
+                    </td>
+                </tr>
+            </table> 
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend class="titulo-campos-formulario">Dados de Endereço</legend>
+            <table cellpadding="2">
+                <tr class="texto-negrito">
+                    <td>
+                        <label class="titulo-campos-formulario" for="rua">Rua:</label</>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="rua">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="nro">Número:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="nro" size="6">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="bairro">Bairro:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="bairro">
+                    </td>
+                    <tr class="texto-negrito">
+                    <td>
+                        <label class="titulo-campos-formulario" for="cidade">Cidade:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="cidade">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="estado">Estado:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <select name="estado" id="uf">
+                            <option value= "AC">Acre</option>
+                            <option value= "AL">Alagoas</option>
+                            <option value= "AP">Amapá</option>
+                            <option value= "AM">Amazonas</option>
+                            <option value= "BA">Bahia</option>
+                            <option value= "CE">Ceará </option>
+                            <option value= "DF">Distrito Federal</option>
+                            <option value= "ES">Espírito Santo</option>
+                            <option value= "GO">Goiás</option>
+                            <option value= "MA">Maranhão</option>
+                            <option value= "MT">Mato Grosso</option>
+                            <option value= "MS">Mato Grosso do Sul</option>
+                            <option value= "MG">Minas Gerais</option>
+                            <option value= "PA">Pará</option>
+                            <option value= "PB">Paraíba</option>
+                            <option value= "PR">Paraná</option>
+                            <option value= "PE">Pernambuco</option>
+                            <option value= "PI">Piauí</option>
+                            <option value= "RJ">Rio de Janeiro</option>
+                            <option value= "RN">Rio Grande do Norte</option>
+                            <option value= "RS">Rio Grande do Sul</option>
+                            <option value= "RO">Rondônia</option>
+                            <option value= "RR">Roraima</option>
+                            <option value= "SC">Santa Catarina</option>
+                            <option value= "SP">São Paulo</option>
+                            <option value= "SE">Sergipe</option>
+                            <option value= "TO">Tocantins</option>
+                        </select>
+                    </td>
+                    <td align="left">
+                        <label class="titulo-campos-formulario" for="cep">CEP:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="cep" size="5" maxlength="5">
+                        -
+                        <input type="text" name="cep2" size="3" maxlength="3">
+                    </td>
+                </tr>
+                <br>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend class="texto-negrito">Dados de contato</legend>
+                <table cellspacing="2">
+                    <tr class="texto-negrito">
+                        <td>
+                            <label class="titulo-campos-formulario" for="email">E-mail:</label>
+                        </td>
+                        <td align="left" class="campo-para-preencher">
+                            <input type="text" name="email">
+                        </td>
+                        <td>
+                            <label class="titulo-campos-formulario" for="celular">Celular:</label>
+                        </td>
+                        <td align="left" class="campo-para-preencher">
+                            <input type="text" name="celular">
+                        </td>
+                    </tr>
+                    <tr class="texto-negrito">
+                        <td>
+                            <label class="titulo-campos-formulario" for="telefone">Telefone:</label>
+                        </td>
+                        <td align="left" class="campo-para-preencher">
+                            <input type="text" name="telefone">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        <br>
+    </form>
+    <form align="right" class="botoes">
+        <button class="btn-ok grow btn" type="submit" value="OK">Cadastrar</button>
+        <button class="btn-rs shrink btn" type="reset" value="reset">Cancelar&nbsp</button>
+    </form>
+</body>
+</html>

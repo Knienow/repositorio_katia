@@ -1,0 +1,246 @@
+<!--TELA 2: CADASTRO DE PRODUTOS
+MENU DE NAVEGAÇÃO ENTRE A TELA 1 E A TELA 2
+Nome -ok
+marca do produto - ok
+Descrição do produto -ok
+Quantidade -ok
+Preço de custo -ok
+Preço de venda -ok
+Categoria -ok
+Dados tributários - incluir mais campor, especificar
+Fabricante - ok
+Validade -ok
+Data da Compra -ok
+Distribuidora/Vendedor - ok
+NF de compra -ok
+Código de Barras - ok
+Botão Cadastrar e Botão Cancelar- ok-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de produtos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+
+</head>
+<body>
+  <body> 
+    <table>
+        <tr>
+            <td>
+                <a href="clientes.html" style="color: black; text-decoration:none">
+                    <img src="./imagens/users.png" width="50" height="50">
+                    <br>
+                    Usuário
+                </a>
+            </td>
+            <td align="center" class="botoes-topo-menu">
+                <a href="produtos.html" style="color: black; text-decoration:none">
+                    <img src="./imagens/box.png" width="50" height="50">
+                    <br>
+                    Produto
+                </a>
+            </td>
+        </tr>
+    </table>
+    <h1 align="center">Cadastro de produtos</h1>
+    <form action="" method="post" style="color: black" align="left">
+        <fieldset>
+            <legend class="texto-negrito">Dados do produto</legend>
+            <table cellpadding="2">
+                <tr class="texto-negrito">
+                    <td>
+                        <label class="titulo-campos-formulario" for="nome">Nome do produto:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="nome">
+                    </td>
+                    <td>
+                      <label class="titulo-campos-formulario" for="marca">Marca do produto:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                      <input type="text" name="marca">
+                    </td>
+                    <td>
+                      <label class="titulo-campos-formulario" for="categoria">Categoria:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <select categoria="categoria" id="categoria">
+                            <option value="cat1">Artigos para Pets</option>
+                            <option value="cat2">Brinquedos</option>
+                            <option value="cat3">Cama, mesa e banho</option>
+                            <option value="cat4">Cosméticos</option>
+                            <option value="cat5">Decoração</option>
+                            <option value="cat6">Eletrodomésticos</option>
+                            <option value="cat7">Eletrônicos</option>
+                            <option value="cat8">Materiais de limpeza</option>
+                            <option value="cat9">Peças automotivas</option>
+                            <option value="cat10">Outros</option>                                                  
+                            <option value="cat11">Vestuário</option>    
+                        </select>
+                    </td>
+                    <td>
+                      <label class="titulo-campos-formulario" for="codigo">Código de barrras do produto:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                      <input type="text" name="codigo">
+                    </td>
+                    <td>
+                      <label class="titulo-campos-formulario" for="coduniversal">Código universal do produto:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                      <input type="text" name="coduniversal">
+                    </td>
+                    <td>
+                      <label class="titulo-campos-formulario" for="nfcompra">Nota fiscal de compra do produto:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                      <input type="text" name="nfcompra">
+                    </td>
+                    <td>
+                      <label class="titulo-campos-formulario" for="datacompra">Data de compra:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="dia" size="2" maxlength="2" value="dd">
+                        <input type="text" name="mes" size="2" maxlength="2" value="mm">
+                        <input type="text" name="ano" size="4" maxlength="2" value="aaaa">
+                    </td>
+                    <td>
+                      <label class="titulo-campos-formulario" for="validade">Validade:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="dia" size="2" maxlength="2" value="dd">
+                        <input type="text" name="mes" size="2" maxlength="2" value="mm">
+                        <input type="text" name="ano" size="4" maxlength="2" value="aaaa">
+                    </td>
+                </tr>
+            </table> 
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend class="texto-negrito">Valores</legend>
+            <table cellpadding="2">
+                <tr class="texto-negrito">
+                    <td>
+                        <label class="titulo-campos-formulario" for="text">Preço de custo:<td>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="preco1">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="codigo">Preço de revenda:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="preco2">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="quantidade">Quantidade:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="quantidade">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend class="texto-negrito">Dados tributários</legend>
+          <table cellpadding="2">
+              <tr class="texto-negrito">
+                  <td>
+                      <label class="titulo-campos-formulario" for="nomenfe">Nome do produto na NF-e:</label>
+                  </td>
+                  <td align="left" class="campo-para-preencher">
+                      <input type="text" name="nomenfe">
+                  </td>
+                  <td>
+                      <label class="titulo-campos-formulario" for="ncm">NCM:</label>
+                  </td>
+                  <td align="left" class="campo-para-preencher">
+                      <input type="text" name="ncm">
+                  </td>
+                  <td>
+                      <label class="titulo-campos-formulario" for="cest">CEST:</label>
+                  </td>
+                  <td align="left" class="campo-para-preencher">
+                      <input type="text" name="cest">
+                  </td>
+                  <td>
+                      <label class="titulo-campos-formulario" for="icms"> CSONS do ICMS:</label>
+                  </td>
+                  <td align="left" class="campo-para-preencher">
+                      <input type="text" name="icms">
+                  </td>
+                  <td>
+                      <label class="titulo-campos-formulario" for="tipo-origem"> Tipo de origem:</label><!--incluir select? fabricação própria, nacional ou se é importado.-->
+                  </td>
+                  <td align="left" class="campo-para-preencher">
+                      <input type="text" name="tipo-origem">
+                  </td>
+                  <td>
+                      <label class="titulo-campos-formulario" for="origem"> Origem:</label>
+                  </td>
+                  <td align="left" class="campo-para-preencher">
+                      <input type="text" name="origem">
+                  </td>
+              </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend class="texto-negrito">Informações adicionais</legend>
+            <table cellpadding="2">
+                <tr class="texto-negrito">
+                    <td>
+                        <label class="titulo-campos-formulario" for="descricao">Descrição do produto:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="descricao">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="fabricante">Fabricante:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="fabricante">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="distribuidor">Distribuidor/Vendedor:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="distribuidor">
+                    </td>
+                    <td>
+                        <label class="titulo-campos-formulario" for="contatodistribuidor">Contato do Distribuidor/Vendedor:</label>
+                    </td>
+                    <td align="left" class="campo-para-preencher">
+                        <input type="text" name="contatodistribuidor">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend align="center" class="texto-negrito">Imagens do produto</legend>
+            <table cellpading="10" align="center">
+                <tr>
+                    <td>
+                        <img class="imagens-do-produto" src="./imagens/fantasia_dinossauro_para_gatos.jpg" widht="200" height="200">
+                    </td>
+                    <td>
+                        <img class="imagens-do-produto" src="./imagens/fantasia_dinossauro_para_gatos_2.jpg" width="200" height="200">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </form>
+    <br>
+    <form align="right" class="botoes">
+      <button class="btn-ok grow btn" type="submit" value="OK">Cadastrar</button>
+      <button class="btn-rs shrink btn" type="reset" value="reset">Cancelar&nbsp</button>
+    </form>
+</body>
+</html>
