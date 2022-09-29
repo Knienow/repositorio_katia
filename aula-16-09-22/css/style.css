@@ -1,0 +1,51 @@
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 3vw;
+}
+
+#relogio {
+    font-size: 175px;
+    width: 100%vw;
+    margin: 150px;
+    text-align: center;
+    border:2px solid #fff;
+    border-radius: 20px;
+}
+
+.cronometro {
+    font-size: 100px;
+    width: 100%;
+    text-align: center;
+    border:2px solid #fff;
+    border-radius: 20px;
+    float: left;
+}
+
+button {
+    text-align: center;
+    height: 50px;
+    width: 100px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    float: left;
+    margin-top: 35px;
+}
+
+.start {
+    background-color: rgb(47, 177, 7);
+    margin-left: 200px;
+}
+
+.stop {
+    background-color: rgb(189, 42, 5);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.reset {
+    background-color: rgb(211, 127, 1);
+}
