@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução JS</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/script.js">
+    </script>    
+</head>
+<body> 
+    <!--Disparando eventos-->
+    <buttton type="button" onclick="alert('Bem-vindo!')">Clique aqui!</buttton>
+    
+    <!--Atributo Global ID-->
+    <p id="paragrafo">Olá</p>
+    <button type="button" onclick="fAlterar()">Alterar!</button>   
+
+    <img id="lampChange" onclick="changeLamp()" src="./image/lampoff.gif" width="200" height="360">
+    <p>Click the light bulb to turn on/off the light.</p>
+    <br/><br/>
+
+    <fieldset>
+        <legend>Cálculos matemáticos</legend>
+        <input type="text" id="v1"><br/>
+        <input type="text" id="v2"><br/>
+        <p id="res">Resposta:</p>
+
+        <button type="button" onclick="somar()">Somar</button>
+        <button type="button" onclick="subtrair()">Subtrair</button>
+        <button type="button" onclick="multiplicar()">Multiplicar</button>
+        <button type="button" onclick="dividir()">Dividir</button>
+        <button type="button" onclick="porcentagem()">Porcentagem</button>
+        <button type="button" onclick="resto()">Resto</button>
+        <button type="reset" onclick="limpar()">Limpar</button>
+    </fieldset>
+</body>
+</html>
