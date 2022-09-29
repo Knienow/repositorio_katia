@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop's - instruções de repetição</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Contando de 1 até 10</h2>
+    <button onclick="contar1()" id="btn1">Contar de 1 a 10</button>
+    <section id="out1"><p>Clique no botão para iniciar a contagem</p></section>
+    <br>
+    <h2>Contagem de 1 a 10, marcando os números pares</h2>
+    <button onclick="contar2()" id="btn2">Iniciar contagem</button>
+    <section id="out2"><p>Clique no botão para iniciar a contagem</section>
+    <br>
+    <h2>Contagem de 1 a 10, marcando os números ímpares</h2>
+    <button onclick="contar3()" id="btn3">Iniciar contagem</button>
+    <section id="out3"><p>Clique no botão para iniciar a contagem</section>
+    <br>
+    <h2>Contagem regressiva</h2>
+    <button onclick="contar4()" id="btn4">Iniciar contagem regressiva</button>
+    <section id="out4"><p>Clique no botão para iniciar a contagem regressiva</section>
+    <br>
+    <h2>Contagem inteligente</h2>
+        <p>Insira o valor inicial e final da contagem (acendente ou decrecente e negativos)</p>
+        <section id="in">
+            <form action="#" method="get">
+                <p>
+                    <label for="fn1">Valor inicial:</label>
+                    <input type="text" name="n1" id="fn1" placeholder="inicio da contagem">
+                </p>
+                <p>
+                    <label for="fn2">Valor final:</label>
+                    <input type="text" name="n2" id="fn2" placeholder="fim da contagem">
+                </p>
+                <p>
+                    <input onclick="contagem5()" type="submit" value="Contar" formaction="javascript:contagem5">
+                </p>
+            </form>
+        </section>
+        <section id="out5">
+            <p>Insira as informações e clique no botão</p>
+        </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
