@@ -25,8 +25,9 @@ public class CadastroItensVendas {
 	public CadastroItensVendas() {
 	}
 	
-	public CadastroItensVendas(int idItensVenda, int idProduto, int quantidade, float valorItem) {
+	public CadastroItensVendas(int idItensVenda, int idVenda, int idProduto, int quantidade, float valorItem) {
 		this.idItensVenda = idItensVenda;
+		this.idVenda = idVenda;
 		this.idProduto = idProduto;
 		this.quantidade = quantidade;
 		this.valorItem = valorItem;
@@ -56,6 +57,22 @@ public class CadastroItensVendas {
 	}
 	public void setIdProduto(int idProduto) {
 		this.idProduto = idProduto;
+	}
+	
+	@Column(name="quantidade", nullable = false)
+	public int getQuantidade() {
+		return quantidade;
+	}
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+	
+	@Column(name="valorItem", nullable = false)
+	public float getValorItem() {
+		return valorItem;
+	}
+	public void setValorItem(float valorItem) {
+		this.valorItem = valorItem;
 	}
 	
 }
