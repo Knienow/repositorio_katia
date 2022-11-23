@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro Serviços</title>
+<script src="https://kit.fontawesome.com/a68915eedd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<a href="CadastroServicos.html"><button>Cadastro</button></a>
+<a href="ListaServicos.html"><button>Listar Serviços</button></a>
+	<fieldset>
+		<legend>Cadastro Serviços</legend>
+			<form th:action="@{/api/v1/CadastroServicos}" th:object="${CadastroServicos}" method="post">
+				<div>
+					<label>Id:</label>
+					<input type="text" readonly="readonly">
+					<label>Descrição:</label>
+					<input type="text">
+				</div>
+				<br>
+				<br>
+				<div>
+					<label>Tempo Estimado:</label>
+					<input type="text" readonly="readonly">
+					<label>Responsável:</label>
+					<input type="text">
+				</div>
+				<br>
+				<br>
+				<div>
+					<label>Valor:</label>
+					<input type="text" readonly="readonly">
+				</div>
+				<br>
+				<div>
+				<button type="submit">Cadastrar</button>
+				<button type="reset">Limpar</button>				
+				</div>
+			</form>
+	</fieldset>
+
+</body>
+</html>
